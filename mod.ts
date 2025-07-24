@@ -9,3 +9,4 @@ export * from "./contribution.ts";
 export * from "./paycheck.ts";
 export * from "./housing.ts";
 export * from "./car.ts";
+export * from "./tab.ts";
