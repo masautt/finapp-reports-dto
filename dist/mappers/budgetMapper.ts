@@ -1,5 +1,5 @@
 //@mappers/budgetMapper.ts
-import { BudgetModel } from "@models/budgetModel.ts";
+import { BudgetModel } from "../models/budgetModel.ts";
 
 export const budgetMapper = {
   mapToBudgetModel: (data: any): BudgetModel => ({

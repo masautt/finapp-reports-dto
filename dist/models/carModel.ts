@@ -1,6 +1,6 @@
 //@models/carModel.ts
-import { DateFormat, DateRangeFields } from "@models/dateModel.ts";
-import { CommonFields } from "@models/commonModel.ts";
+import { DateFormat, DateRangeFields } from "./dateModel.ts";
+import { CommonFields } from "./commonModel.ts";
 
 export type CarModel = DateRangeFields & CommonFields & {
   paymentDate: DateFormat;

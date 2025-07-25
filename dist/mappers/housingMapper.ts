@@ -1,5 +1,5 @@
 //@mappers/housingMapper.ts
-import { HousingModel } from "@models/housingModel.ts";
+import { HousingModel } from "../models/housingModel.ts";
 
 export const housingMapper = {
   mapToHousingModel: (data: any): HousingModel => ({

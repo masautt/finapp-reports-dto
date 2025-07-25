@@ -1,5 +1,5 @@
 //@mappers/investmentMapper.ts
-import { InvestmentModel } from "@models/investmentModel.ts";
+import { InvestmentModel } from "../models/investmentModel.ts";
 
 export const investmentMapper = {
   mapToInvestmentModel: (data: any): InvestmentModel => ({

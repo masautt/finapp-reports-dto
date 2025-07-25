@@ -1,5 +1,5 @@
 //@mappers/transactionMapper.ts
-import { TransactionModel } from "@models/transactionModel.ts";
+import { TransactionModel } from "../models/transactionModel.ts";
 
 export const transactionsMapper = {
   

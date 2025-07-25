@@ -1,6 +1,6 @@
 //@models/investmentModel.ts
-import { DateRangeFields } from "@models/dateModel.ts";
-import { CommonFields } from "@models/commonModel.ts";
+import { DateRangeFields } from "./dateModel.ts";
+import { CommonFields } from "./commonModel.ts";
 
 export type InvestmentModel = DateRangeFields & CommonFields & {
   beginningBalance: number | null;

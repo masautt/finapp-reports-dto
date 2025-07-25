@@ -1,5 +1,5 @@
 //@mappers/transumMapper.ts
-import { TransumBusModel, TransumCatModel, TransumCatSubModel, TransumLocModel, TransumMoModel, TransumSubModel, TransumYrModel, TransumYrCatModel, TransumYrMoModel, TransumYrMoCatModel, TransumYrMoDaModel, TransumYrMoDaCatModel, TransumYrMoDaCatSubModel } from "@models/transumModel.ts";
+import { TransumBusModel, TransumCatModel, TransumCatSubModel, TransumLocModel, TransumMoModel, TransumSubModel, TransumYrModel, TransumYrCatModel, TransumYrMoModel, TransumYrMoCatModel, TransumYrMoDaModel, TransumYrMoDaCatModel, TransumYrMoDaCatSubModel } from "../models/transumModel.ts";
 
 const mapBase = (data: any) => ({
   totalAmount: data.total_amount,

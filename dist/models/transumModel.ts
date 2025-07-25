@@ -1,5 +1,5 @@
 //@models/transumModel.ts
-import { TransumBaseModel } from "@models/transumBaseModel.ts";
+import { TransumBaseModel } from "./transumBaseModel.ts";
 
 type WithYear = { year: number };
 type WithMonth = { month: string };

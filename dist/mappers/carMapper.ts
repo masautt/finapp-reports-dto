@@ -1,5 +1,5 @@
 //@mappers/carMapper.ts
-import { CarModel } from "@models/carModel.ts";
+import { CarModel } from "../models/carModel.ts";
 
 export const carMapper = {
   mapToCarModel: (data: any): CarModel => ({

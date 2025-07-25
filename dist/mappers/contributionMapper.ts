@@ -1,5 +1,5 @@
 //@mappers/contributionMapper.ts
-import { ContributionModel } from "@models/contributionModel.ts";
+import { ContributionModel } from "../models/contributionModel.ts";
 
 export const contributionMapper = {
   mapToContributionModel: (data: any): ContributionModel => ({

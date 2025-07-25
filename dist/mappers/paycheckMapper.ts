@@ -1,5 +1,5 @@
 //@mappers/paychecksMapper.ts
-import { PaycheckModel } from "@models/paycheckModel.ts";
+import { PaycheckModel } from "../models/paycheckModel.ts";
 
 export const paychecksMapper = {
   mapToPaycheckModel: (data: any): PaycheckModel => ({

@@ -1,6 +1,6 @@
 //@models/housingModel.ts
-import { DateRangeFields, DateFormat } from "@models/dateModel.ts";
-import { CommonFields } from "@models/commonModel.ts";
+import { DateRangeFields, DateFormat } from "./dateModel.ts";
+import { CommonFields } from "./commonModel.ts";
 
 export type HousingModel = DateRangeFields & CommonFields & {
   rentAmount: number

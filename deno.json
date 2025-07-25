@@ -1,6 +1,0 @@
-{
-  "importMap": "import_map.json",
-  "tasks": {
-    "build": "deno run -A scripts/build.ts"
-  }
-}

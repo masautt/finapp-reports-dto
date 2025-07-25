@@ -1,6 +1,6 @@
 //@models/paycheckModel.ts
-import { DateFormat, DateRangeFields } from "@models/dateModel.ts";
-import { CommonFields } from "@models/commonModel.ts";
+import { DateFormat, DateRangeFields } from "./dateModel.ts";
+import { CommonFields } from "./commonModel.ts";
 
 export type PaycheckModel = DateRangeFields & CommonFields & {
     source: string;
