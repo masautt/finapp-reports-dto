@@ -1,3 +1,4 @@
+//@models/dateModel.ts
 export type DateRangeFields = {
   startDate: DateFormat;
   month: MonthFormat;

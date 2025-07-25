@@ -1,3 +1,4 @@
+//@models/tabModel.ts
 export type TabModel = {
   id: string;
   name: string;

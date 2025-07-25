@@ -1,5 +1,6 @@
-import { ExactDateFields } from "./date.ts";
-import { CommonFields } from "./common.ts";
+//@models/transactionModel.ts
+import { ExactDateFields } from "@models/dateModel.ts";
+import { CommonFields } from "@models/commonModel.ts";
 
 export type TransactionModel = ExactDateFields & CommonFields & {
   category: TransactionCategory;
