@@ -1,7 +1,6 @@
-// scripts/build.ts
 import { walk } from "https://deno.land/std@0.224.0/fs/walk.ts";
 import { ensureDir } from "https://deno.land/std@0.224.0/fs/ensure_dir.ts";
-import { dirname, join, relative } from "https://deno.land/std@0.224.0/path/mod.ts";
+import { dirname, join, relative, resolve } from "https://deno.land/std@0.224.0/path/mod.ts";
 
 const SRC_DIR = "src";
 const DIST_DIR = "dist";
@@ -59,3 +58,36 @@ for await (const entry of walk(SRC_DIR, { exts: [".ts"], includeDirs: false })) 
 await Deno.writeTextFile(MOD_TS_PATH, exportsForMod.join("\n") + "\n");
 
 console.log(`✅ Built /dist with rewritten imports and generated mod.ts`);
+
+// --- New cleanup logic here ---
+
+const repoRoot = resolve(".");
+
+for await (const entry of walk(repoRoot, { maxDepth: 1 })) {
+  const name = entry.name;
+  // Skip dist folder and .git folder
+  if (
+    name === DIST_DIR || 
+    name === ".git"
+  ) {
+    continue;
+  }
+
+  // For root files/folders other than dist and .git, remove them
+  const path = join(repoRoot, name);
+
+  try {
+    const stat = await Deno.lstat(path);
+    if (stat.isDirectory) {
+      await Deno.remove(path, { recursive: true });
+      console.log(`Deleted folder: ${name}`);
+    } else {
+      await Deno.remove(path);
+      console.log(`Deleted file: ${name}`);
+    }
+  } catch (error) {
+    console.error(`Failed to delete ${name}:`, error);
+  }
+}
+
+console.log("✅ Cleaned repo except /dist and .git");
