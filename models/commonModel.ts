@@ -1,3 +1,4 @@
+//@models/commonModel.ts
 export type CommonFields = {
   id: IdFormat;
   number: number;

@@ -1,5 +1,6 @@
-import { DateRangeFields } from "./date.ts";
-import { CommonFields } from "./common.ts";
+//@models/sidegigModel.ts
+import { DateRangeFields } from "@models/dateModel.ts";
+import { CommonFields } from "@models/commonModel.ts";
 
 export type SidegigModel = DateRangeFields & CommonFields & {
   hoursWorked: number | null;

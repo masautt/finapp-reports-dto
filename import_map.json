@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@models/": "./models/",
+    "@mappers/": "./mappers/"
+  }
+} 
